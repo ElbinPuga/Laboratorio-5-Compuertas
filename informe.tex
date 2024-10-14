@@ -1,0 +1,96 @@
+\documentclass{extbook}
+\usepackage[papersize={8.5in,11in},top=1in,bottom=1in]{geometry}
+\RequirePackage{fix-cm}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{fullpage}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{float}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{amsmath}
+\renewcommand{\contentsname}{Contenido}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\listfigurename}{Lista de figuras}
+\renewcommand{\bibname}{Bibliografía}
+
+\usepackage[fontsize=13.5pt]{fontsize}
+\setlength{\parindent}{0pt}
+
+\titleformat{\chapter}[display]
+  {\bfseries\huge} % Estilo del título
+  {\hfill\Large} % Alineación a la derecha
+  {3ex} % Espaciado entre el número del capítulo y el título
+  {\vspace{-5cm}\titlerule\vspace{1.5ex}\hfill} % Regla arriba y alineación del título a la derecha
+  [\vspace{1ex}\titlerule] % Regla debajo del título
+
+
+  \makeatletter
+  \patchcmd{\chapter}
+    {\if@openright\cleardoublepage\else\clearpage\fi}
+    {\clearpage}
+    {}{}
+  \makeatother
+
+  \definecolor{codegreen}{rgb}{0,0.6,0}
+  \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+  \definecolor{codepurple}{rgb}{0.58,0,0.82}
+  \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+   
+  \lstdefinestyle{mystyle}{
+      backgroundcolor=\color{backcolour},   
+      commentstyle=\color{codegreen},
+      keywordstyle=\color{magenta},
+      numberstyle=\tiny\color{codegray},
+      stringstyle=\color{codepurple},
+      basicstyle=\footnotesize,
+      breakatwhitespace=false,         
+      breaklines=true,                 
+      captionpos=b,                    
+      keepspaces=true,                 
+      numbers=left,                    
+      numbersep=5pt,                  
+      showspaces=false,                
+      showstringspaces=false,
+      showtabs=false,                  
+      tabsize=2
+  }
+   
+  \lstset{style=mystyle}
+
+
+\begin{document}
+\input{portada.tex}
+\tableofcontents
+\listoffigures
+\chapter{Marco Teórico}
+\input{1 Marco teorico/marco.tex}
+\chapter{Introducción}
+\input{2 Introduccion/introduccion.tex}
+\chapter{Cuerpo de trabajo}
+\section{Tema: Introducción a la placa Arduino}
+\section{Objetivos generales}
+\input{3 Cuerpo de trabajo/3.2_ob_generales.tex}
+\section{Objetivos Específicos}
+\input{3 Cuerpo de trabajo/3.3_ob_espec.tex}
+\section{Materiales}
+\input{3 Cuerpo de trabajo/3.4_materiales.tex}
+\chapter{Desarrollo}
+\section{Circuitos propuestos}
+\section{Circuitos desarrollados}
+\input{4 Desarrollo/circuitos_fotos.tex}
+\chapter{Conclusiones}
+\input{6 Conclusiones/conclusiones.tex}
+\input{7 Referencias/ref.tex}
+\chapter{Anexos}
+\section{Data de los materiales usados}
+\input{8 Anexos/anexo.tex}
+\section{Alcance de la aplicación de este laboratorio a futuro}
+\end{document}

@@ -1,0 +1,65 @@
+\section{Las Compuertas Lógicas}
+
+Una compuerta lógica es un dispositivo electrónica que en función de los valores de entrada otorga un resultado o una salida determinada, son la base de la electrónica digital. Se utilizan no solo en electrónica si no que conceptualmente sus fundamentos se aplican en otras áreas de la ciencia, Mecánica hidráulica o neumática por ejemplo. vamos a comentar el funcionamiento de algunas compuertas lógicas básicas y sus tablas de verdad.
+
+\subsection{Compuerta AND (BUFFER)}
+
+Para que una compuerta AND entregue un uno a la salida, todas las entradas deben tambien estar en uno, basta con que alguna con lo este para que en la salida se vea un cero, “Si condición uno Y condición dos Y condición tres se cumplen, entonces la salida sera verdadera.” En términos simbólicos a la operación se la conoce con el símbolo “.” o “ˆ“.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.70]{Imagenes/AND.png}
+    \caption{Compuerta AND}{Fuente: Internet}
+\end{figure}
+
+
+\subsection{COMPUERTA NOT}
+Todo lo que ingresa por la entrada, a la salida entrega lo opuesto, si ingresa un estado alto “1” a la salida se vera un estado bajo “0” por ejemplo, tiene una sola entrada.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.70]{Imagenes/NOT.png}
+    \caption{Compuerta NOT}{Fuente: Internet}
+\end{figure}
+
+\subsection{COMPUERTA OR}
+Esta compuerta es diferente a la AND, basta con que una de las entradas este en estado alto para que automáticamente la salida pase a estar en estado alto, “Si condición uno O condición dos O condición tres entonces la salida sera verdadera”. En términos simbólicos a la operación se la conoce con el símbolo +.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.7]{Imagenes/OR.png}
+    \caption{Compuerta OR}{Fuente: Internet}
+\end{figure}
+
+\subsection{COMPUERTA XOR de 2 entradas}
+
+Este tipo de compuertas son una derivación de las compuertas básicas que comentamos al comienzo, tienen una condición de salida no tan transparente como los casos anteriores, pero son muy utilizadas en el mundo de la electrónica digital.
+Para un sistema de dos entradas la ecuación característica es la siguiente.
+
+Para un sistema de dos entradas la ecuación característica es la siguiente.
+
+\begin{equation}
+    F = A \bigoplus B
+    F = \neg A B +  A \neg B
+\end{equation}
+
+Como se puede ver, la salida deja de ser tan intuitiva con en los casos anteriores, de manera que es necesario diagramar la tabla de verdad para calcular correctamente el resultado.
+Como dato memotecnico, para una compuerta XOR de dos entradas podemos decir que a la salida va un uno si las dos entradas son distintas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.70]{Imagenes/XOR.png}
+    \caption{Compuerta XOR}{Fuente: Internet}
+\end{figure}
+
+\subsection{COMPUERTA XOR (de tres entradas)}
+Funciona de la misma manera que la de dos entradas, solo que es mas largo el calculo, puesto que primero tenemos que hacer el calculo con dos entradas y luego sumarle la tercera, esta operatoria aplica para una compuerta XOR de cualquier cantidad de entradas, solo es necesario estar atento en el calculo y listo.
+
+Como dato memotecnico, para una compuerta XOR de tres entradas podemos decir que la salida sera un uno si la cantidad de unos en la entrada es impar.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.7]{Imagenes/XOR3.png}
+    \caption{Compuerta XOR (3 entradas)}{Fuente: Internet}
+\end{figure}
+
+
